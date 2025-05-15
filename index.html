@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Berkshire Hathaway — Redesign</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Skip link for keyboard users -->
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-flex">
+      <button class="menu-btn" aria-label="Open menu">☰</button>
+      <a href="#" class="logo">Berkshire Hathaway</a>
+      <form role="search" class="search-form">
+        <input type="search" placeholder="Search" aria-label="Search site" />
+        <button type="submit" aria-label="Submit search">🔍</button>
+      </form>
+    </div>
+  </header>
+
+  <!-- Address bar -->
+  <div class="address-bar">
+    3555 Farnam Street Omaha, NE 68131
+  </div>
+
+  <main id="main" class="sections-grid">
+    <section aria-labelledby="latest-news">
+      <h2 id="latest-news">Latest News</h2>
+      <ul class="link-list">
+        <li><a href="#">Fraudulent Claims Regarding Buffett’s…</a></li>
+        <li><a href="#">First Quarter earnings 2025</a></li>
+      </ul>
+    </section>
+    <section aria-labelledby="financials">
+      <h2 id="financials">Financials</h2>
+      <ul class="link-list">
+        <li><a href="#">Annual &amp; Interim Reports</a></li>
+        <li><a href="#">Links to SEC Filings</a></li>
+        <li><a href="#">Special Letters from Warren &amp; Charlie</a></li>
+      </ul>
+    </section>
+    <section aria-labelledby="governance">
+      <h2 id="governance">Governance</h2>
+      <ul class="link-list">
+        <li><a href="#">Corporate Governance</a></li>
+        <li><a href="#">Sustainability</a></li>
+        <li><a href="#">Charitable Pledges</a></li>
+      </ul>
+    </section>
+    <section aria-labelledby="resources">
+      <h2 id="resources">Resources</h2>
+      <ul class="link-list">
+        <li><a href="#">Annual Meeting Information</a></li>
+        <li><a href="#">Letters to Shareholders</a></li>
+        <li><a href="#">Charlie Munger’s Letters to Wesco</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 1978–2025 Berkshire Hathaway Inc. | <a href="#">Legal Disclaimer</a></p>
+  </footer>
+</body>
+</html>

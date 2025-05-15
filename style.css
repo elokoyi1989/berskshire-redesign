@@ -1,0 +1,179 @@
+/* 1. Reset & Base */
+*, *::before, *::after { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: #0B2545;
+  color: #333333;
+  font-family: 'Source Sans Pro', sans-serif;
+  line-height: 1.5;
+}
+a { color: inherit; text-decoration: none; }
+
+/* 2. Skip Link */
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: -999px;
+  background: #333333;
+  color: #FFFFFF;
+  padding: 8px;
+  z-index: 1000;
+}
+.skip-link:focus {
+  left: 8px;
+  top: 8px;
+}
+
+/* 3. Layout Tokens */
+:root {
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 48px;
+  --color-primary: #0B2545;
+  --color-text: #333333;
+  --color-border: #777777;
+  --color-bg-card: #F5F5F5;
+  --color-white: #FFFFFF;
+}
+
+/* 4. Header */
+.site-header {
+  background: #333333;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+.header-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  padding: 0 var(--space-lg);
+}
+.logo {
+  font-family: 'Merriweather', serif;
+  font-size: 28px;
+  color: var(--color-white);
+  letter-spacing: 1px;
+    position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.menu-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: var(--color-white);
+  cursor: pointer;
+}
+.search-form {
+  display: flex;
+  align-items: center;
+}
+.search-form input {
+  padding: var(--space-sm) var(--space-md);
+  border: 2px solid var(--color-text);
+  border-radius: 4px;
+  width: 200px;
+  transition: width 0.3s;
+}
+.search-form input:focus {
+  width: 260px;
+  border-color: var(--color-primary);
+  outline: none;
+}
+.search-form button {
+  margin-left: var(--space-xs);
+  background: var(--color-primary);
+  border: none;
+  padding: var(--space-sm);
+  border-radius: 4px;
+  color: var(--color-white);
+  cursor: pointer;
+}
+
+/* 5. Address Bar */
+.address-bar {
+  background: var(--color-bg-card);
+  text-align: center;
+  font-family: 'Merriweather', serif;
+  font-size: 18px;
+  color: var(--color-primary);
+  padding: var(--space-sm) 0;
+}
+
+/* 6. Sections Grid */
+.sections-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+  padding: var(--space-xl) var(--space-lg);
+}
+section {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: var(--space-lg);
+  min-height: 200px;
+  scroll-margin-top: 100px;
+}
+section h2 {
+  font-family: 'Merriweather', serif;
+  font-size: 22px;
+  color: var(--color-primary);
+  margin-bottom: var(--space-sm);
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: var(--space-xs);
+}
+.link-list {
+  list-style: disc inside;
+  margin: 0;
+  padding: 0;
+}
+.link-list li {
+  margin-bottom: var(--space-sm);
+}
+.link-list a {
+  display: inline-block;
+  font-size: 17px;
+  color: var(--color-primary);
+  padding: var(--space-xs) 0;
+}
+.link-list a:hover,
+.link-list a:focus {
+  text-decoration: underline;
+  outline: 2px solid var(--color-border);
+}
+
+/* 7. Footer */
+.site-footer {
+  text-align: center;
+  background: var(--color-bg-card);
+  padding: var(--space-md) 0;
+  border-top: 1px solid var(--color-border);
+  font-size: 14px;
+}
+.site-footer a:hover {
+  text-decoration: underline;
+}
+
+/* 8. Breakpoints */
+@media (min-width: 600px) {
+  .sections-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg);
+  }
+}
+@media (min-width: 1024px) {
+  .sections-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-xl);
+  }
+  .search-form input {
+    width: 260px;
+  }
+}
